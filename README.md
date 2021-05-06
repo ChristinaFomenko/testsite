@@ -1,3 +1,3 @@
 # testsite
-learning django
+learning django,
 news
