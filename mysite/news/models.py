@@ -12,7 +12,6 @@ class News(models.Model):
     category = models.ForeignKey('Category', on_delete=models.PROTECT, verbose_name='Категория')
     views = models.IntegerField(default=0)
 
-
     def get_absolute_url(self):
         return reverse('view_news', kwargs={"pk": self.pk})
 
@@ -30,7 +29,6 @@ class Category(models.Model):
 
     def get_absolute_url(self):
         return reverse('category', kwargs={"category_id": self.pk})
-
 
     def __str__(self):
         return self.title
